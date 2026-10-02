@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industry Client Project | Prisha Mathur</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --red: #CC0033;
+      --black: #111111;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--black);
+      background: var(--white);
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 3px solid var(--red);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav .logo {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    nav a.back {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a.back:hover {
+      color: var(--red);
+      border-bottom-color: var(--red);
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    header .course {
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    header p.summary {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #444;
+    }
+
+    /* QUICK FACTS */
+    .facts {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 15px;
+    }
+
+    .fact {
+      background: var(--gray);
+      border-left: 4px solid var(--red);
+      padding: 14px 18px;
+      border-radius: 4px;
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .fact span {
+      font-size: 0.95rem;
+    }
+
+    /* CONTENT */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    main h2 {
+      font-size: 1.5rem;
+      margin: 40px 0 15px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--red);
+      display: inline-block;
+    }
+
+    main p { margin-bottom: 14px; }
+
+    main ul {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    main li { margin-bottom: 8px; }
+
+    .rec {
+      border: 1px solid #ddd;
+      border-top: 4px solid var(--red);
+      border-radius: 4px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .rec h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .rec p { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      background: var(--black);
+      color: var(--white);
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .back-link:hover { background: var(--red); }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 3px solid var(--red);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; }
+      header h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Prisha Mathur</a>
+    <a href="index.html#projects" class="back">&larr; Back to Projects</a>
+  </nav>
+
+  <header>
+    <h1>Industry Client Project</h1>
+    <p class="course">Management Skills &middot; Rutgers Business School</p>
+    <p class="summary">A consulting-style engagement with a 10-person car detailing business: diagnosing why employees were repeatedly arriving late and recommending how management could fix it.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact"><strong>Timeline</strong><span>Sep 2025 &ndash; Dec 2025</span></div>
+    <div class="fact"><strong>Team</strong><span>5 students</span></div>
+    <div class="fact"><strong>Client</strong><span>Local detailing business, NJ</span></div>
+    <div class="fact"><strong>Methods</strong><span>Interviews, review analysis, frameworks</span></div>
+  </div>
+
+  <main>
+
+    <h2>The Problem</h2>
+    <p>The client is a founder-run detailing shop with ten employees and a strong reputation, backed by more than a hundred positive online reviews. Management told us that one team member had been late to work at least four times, and nothing had happened as a result. Because each detailing job is time-intensive, a late start meant rescheduled appointments, frustrated customers, coworkers covering extra work, and lost revenue for the day.</p>
+
+    <h2>Approach</h2>
+    <ul>
+      <li><strong>Primary research:</strong> four interviews with management by phone, email, in person, and over Zoom, covering conduct, communication, staffing, and leadership style.</li>
+      <li><strong>Secondary research:</strong> analysis of Google and Yelp reviews and of the social media presence of the client and its competitors.</li>
+      <li><strong>Frameworks:</strong> Expectancy Theory and the Team Effectiveness Model, used to explain why the problem was happening rather than only describing it.</li>
+    </ul>
+
+    <h2>Findings</h2>
+    <p>Our analysis traced the tardiness to a missing system rather than to one person. Rewards were handed out informally and without clear criteria, and lateness carried no consequences. Under Expectancy Theory, employees had no clear link between effort, performance, and outcome. Under the Team Effectiveness Model, the shop had no SMART goals for attendance or workflow, which opened the door to social loafing and pushed extra work onto teammates.</p>
+    <p>The deeper issue was a "family-style" culture that had served the business well at a small size but needed more formal, performance-based structure as it grew.</p>
+
+    <h2>Recommendations</h2>
+
+    <div class="rec">
+      <h3>1. Improve the quality of management decisions</h3>
+      <p>Adopt a structured decision process (the Bazerman problem-definition steps) and run pre-mortems (the Klein/Osland method) so managers define problems clearly, weigh criteria, and anticipate failure before acting. Benchmarked against Amazon's written-planning culture and the U.S. Army's structured planning and after-action reviews.</p>
+      <p><em>Trade-offs we flagged:</em> training cost, inconsistent use, and the risk of slowing decisions down.</p>
+    </div>
+
+    <div class="rec">
+      <h3>2. Build a formal influence and communication strategy</h3>
+      <p>Train managers in interpersonal influence (reciprocity, social proof, consistency, authority) and procedural influence (clear agendas, group norms, decision rules). Benchmarked against Google's "influence without authority" training and Netflix's transparent decision rules.</p>
+      <p><em>Trade-offs we flagged:</em> manager discomfort, training cost, and the risk of eroding trust if autonomy goes too far.</p>
+    </div>
+
+    <p>Together, the first recommendation improves the quality of decisions and the second improves how well they are communicated and carried out. We also proposed using authority (research and real-world evidence) and social proof (what high-performing companies do) to help the owner accept the changes.</p>
+
+    <h2>What I Took Away</h2>
+    <ul>
+      <li>How to turn interviews and public data into a clear problem statement.</li>
+      <li>How to use frameworks to find root causes and process gaps instead of blaming individuals.</li>
+      <li>How to weigh costs and risks of each recommendation before proposing it.</li>
+    </ul>
+
+    <a href="index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Prisha Mathur</p>
+  </footer>
+
+</body>
+</html>

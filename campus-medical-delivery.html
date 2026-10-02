@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Medical Delivery App | Prisha Mathur</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --red: #CC0033;
+      --black: #111111;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--black);
+      background: var(--white);
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 3px solid var(--red);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav .logo {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    nav a.back {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a.back:hover {
+      color: var(--red);
+      border-bottom-color: var(--red);
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    header .course {
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    header p.summary {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #444;
+    }
+
+    /* QUICK FACTS */
+    .facts {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 15px;
+    }
+
+    .fact {
+      background: var(--gray);
+      border-left: 4px solid var(--red);
+      padding: 14px 18px;
+      border-radius: 4px;
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .fact span {
+      font-size: 0.95rem;
+    }
+
+    /* CONTENT */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    main h2 {
+      font-size: 1.5rem;
+      margin: 40px 0 15px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--red);
+      display: inline-block;
+    }
+
+    main p { margin-bottom: 14px; }
+
+    main ul {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    main li { margin-bottom: 8px; }
+
+    .rec {
+      border: 1px solid #ddd;
+      border-top: 4px solid var(--red);
+      border-radius: 4px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .rec h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .rec p { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      background: var(--black);
+      color: var(--white);
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .back-link:hover { background: var(--red); }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 3px solid var(--red);
+      font-size: 0.9rem;
+    }
+
+
+    /* TABLES */
+    .table-wrap { overflow-x: auto; margin-bottom: 18px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--black);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    td.label { font-weight: 600; }
+
+    .note {
+      background: var(--gray);
+      border-left: 4px solid var(--red);
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; }
+      header h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Prisha Mathur</a>
+    <a href="index.html#projects" class="back">&larr; Back to Projects</a>
+  </nav>
+
+  <header>
+    <h1>Campus Medical Delivery App</h1>
+    <p class="course">Introduction to Management &middot; Rutgers Business School</p>
+    <p class="summary">A business concept for on-demand medicine delivery to Rutgers students, with a process map, performance measures, and an improvement plan built around customer satisfaction and delivery cost.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact"><strong>Timeline</strong><span>Jan 2026 &ndash; May 2026</span></div>
+    <div class="fact"><strong>Team</strong><span>4 students</span></div>
+    <div class="fact"><strong>Type</strong><span>Concept and case project</span></div>
+    <div class="fact"><strong>Tools</strong><span>SIPOC, performance charts, SMART goals</span></div>
+  </div>
+
+  <main>
+
+    <h2>The Concept</h2>
+    <p>Students who get sick late at night or during exams often have no quick way to get basic medical supplies. Our concept was a mobile app that delivers items like pain relievers, bandages, and allergy medicine to dorms and apartments, fulfilled from campus pop-up shops and delivered by student workers. We built a go-to-market plan, then treated the delivery service as a business process to map, measure, and improve.</p>
+    <div class="note">Performance numbers on this page are illustrative data created for the course exercise, since the service was a concept and not a live business.</div>
+
+    <h2>Process Map (SIPOC)</h2>
+    <p>We started from the customer and worked backward to map the full delivery process.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Suppliers</th><th>Inputs</th><th>Process</th><th>Outputs</th><th>Customers</th></tr>
+        <tr>
+          <td>Wholesale medical distributors, pharmacies, app developers, student drivers, packaging vendors</td>
+          <td>Medical supplies, student delivery staff, ordering app, pop-up shop inventory, bags and bikes</td>
+          <td>Receive order in app, confirm it, assign a driver, pick and package, deliver to dorm, restock</td>
+          <td>Fast, accurate orders, 24/7 availability, reliable service, emergency health essentials</td>
+          <td>Rutgers students on or near campus who want quick, affordable, easy-to-use service</td>
+        </tr>
+      </table>
+    </div>
+    <p>For customers, we defined the behaviors we wanted (repeat orders, positive reviews, referrals, app engagement) and the requirements needed to earn them (late-night speed, accurate orders, affordable pricing, a simple app).</p>
+
+    <h2>Measuring Performance</h2>
+    <p>We built "well-dressed measure" charts that show performance against prior periods, a competitor, and a best-in-class benchmark, along with a goal, status, owner, and active improvement project.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Measure</th><th>Type</th><th>Current</th><th>Competitor</th><th>Goal</th></tr>
+        <tr><td class="label">Customer satisfaction</td><td>Effectiveness</td><td>4.6 / 5</td><td>4.2</td><td>4.8 by Sep 2026</td></tr>
+        <tr><td class="label">Customer loyalty (returning customers)</td><td>Effectiveness</td><td>About 45%</td><td>About 57%</td><td>60% in 2027</td></tr>
+        <tr><td class="label">Cost per delivery</td><td>Efficiency</td><td>About $10.50</td><td>About $9</td><td>$8 in 2027</td></tr>
+      </table>
+    </div>
+    <p>Loyalty and cost were both rated "needs improvement." Repeat customers were growing each quarter but trailed the competitor, and costs were falling but stayed above competitors. We tied these gaps to delivery delays, inconsistent service, inefficient driver scheduling, and supplier costs.</p>
+
+    <h2>Improvement Initiative</h2>
+    <div class="rec">
+      <h3>Goal: raise customer satisfaction from 4.6 to 4.8 by September 2026</h3>
+      <p>We wrote the goal as a SMART goal: a specific score, a measurable target of 4.8, an achievable +0.2 gain, directly tied to customer experience, with a September 2026 deadline.</p>
+    </div>
+    <p>We proposed five changes to the delivery process:</p>
+    <ul>
+      <li><strong>Real-time delivery tracking</strong> so customers know when their order will arrive.</li>
+      <li><strong>Better inventory forecasting</strong> to keep high-demand items in stock.</li>
+      <li><strong>Standardized runner training</strong> for consistent service quality.</li>
+      <li><strong>Automatic follow-up and check-up messages</strong> after each delivery.</li>
+      <li><strong>Demand-based staffing and pop-up shop hours</strong>, expanded during flu season and high-demand weeks.</li>
+    </ul>
+
+    <h2>What I Took Away</h2>
+    <ul>
+      <li>How to map a service as a process and define it from the customer's point of view.</li>
+      <li>How to choose effectiveness and efficiency measures and benchmark them against competitors.</li>
+      <li>How to turn a performance gap into a specific initiative with a measurable goal, which is the same logic used in inventory and operations management.</li>
+    </ul>
+
+    <a href="index.html#projects" class="back-link">&larr; Back to all projects</a>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Prisha Mathur</p>
+  </footer>
+
+</body>
+</html>
