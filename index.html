@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prisha Mathur | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --red: #CC0033;
+      --black: #111111;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--black);
+      background: var(--white);
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 3px solid var(--red);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav .logo {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav ul a:hover {
+      color: var(--red);
+      border-bottom-color: var(--red);
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    header h1 span {
+      color: var(--red);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #444;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--red);
+      display: inline-block;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--gray);
+      border-left: 4px solid var(--red);
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .skill-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+    }
+
+    .skill-card li {
+      padding: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    .level {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .level.pro {
+      background: var(--red);
+    }
+
+    /* PROJECTS */
+    .project-list {
+      display: grid;
+      gap: 25px;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      border-top: 4px solid var(--red);
+      border-radius: 4px;
+      padding: 25px;
+      background: var(--white);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+
+    .project-header h3 {
+      font-size: 1.25rem;
+    }
+
+    .project-date {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .project-course {
+      color: var(--red);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .project-card ul {
+      padding-left: 20px;
+    }
+
+    .project-card li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--black);
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .project-link:hover {
+      background: var(--red);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 3px solid var(--red);
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; }
+      header h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#top" class="logo">Prisha Mathur</a>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <header id="top">
+    <h1>Prisha <span>Mathur</span></h1>
+    <p>Finance and Supply Chain double major at Rutgers Business School, driven to build efficient operations and procurement strategies that cut costs and keep businesses moving.</p>
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Technical</h3>
+        <ul>
+          <li>Microsoft Excel <span class="level pro">Proficient</span></li>
+          <li>SQL <span class="level">Familiar</span></li>
+          <li>Python <span class="level">Familiar</span></li>
+          <li>JavaScript <span class="level">Familiar</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Finance</h3>
+        <ul>
+          <li>Balance Sheets</li>
+          <li>Income Statements</li>
+          <li>Cash Flow Statements</li>
+          <li>Financial Statement Analysis</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Supply Chain</h3>
+        <ul>
+          <li>Supply Chain Fundamentals</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Professional</h3>
+        <ul>
+          <li>Communication (Tutoring Experience)</li>
+          <li>Adaptability</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-list">
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Campus Medical Delivery App</h3>
+          <span class="project-date">Jan 2026 – May 2026</span>
+        </div>
+        <p class="project-course">Introduction to Management</p>
+        <ul>
+          <li>Designed a mobile app concept for on-demand medicine delivery to Rutgers students, building a business strategy and go-to-market plan with a 4-person team.</li>
+          <li>Built a performance measurement framework tracking customer satisfaction, delivery cost, and retention against industry benchmarks, using SMART goals (e.g., cutting delivery cost to $8).</li>
+          <li>Identified process inefficiencies and proposed operational improvements, including real-time tracking, standardized runner training, and demand-based staffing.</li>
+        </ul>
+        <a class="project-link" href="campus-medical-delivery.html">View Project Write-Up</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>RU Shopping App</h3>
+          <span class="project-date">Sep 2025 – Dec 2025</span>
+        </div>
+        <p class="project-course">Rutgers Blueprint</p>
+        <ul>
+          <li>Led go-to-market and brand strategy for a peer-to-peer marketplace app for Rutgers students, positioning it against competitors on seller trust, fees, and buyer protection.</li>
+          <li>Designed a revenue model combining a 10% commission, a $5 monthly seller subscription, and ad revenue, projected against operating costs to set pricing, plus a phased launch plan with KPIs (3,000 visitors, 1,000 followers, 85% positive feedback, 3% conversion).</li>
+        </ul>
+        <a class="project-link" href="RU-Shopping-Marketing-Plan.pdf" target="_blank">View Marketing Plan (PDF)</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Industry Client Project</h3>
+          <span class="project-date">Sep 2025 – Dec 2025</span>
+        </div>
+        <p class="project-course">Management Skills</p>
+        <ul>
+          <li>Conducted four management interviews with a 10-person car detailing business to diagnose a recurring tardiness issue affecting scheduling, client satisfaction, and revenue.</li>
+          <li>Applied Expectancy Theory and the Team Effectiveness Model to trace the problem to a missing incentive and accountability system.</li>
+          <li>Proposed two data-driven recommendations, benchmarked against management practices at Amazon, Google, and Netflix.</li>
+        </ul>
+        <a class="project-link" href="industry-client-project.html">View Project Write-Up</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Prisha Mathur</p>
+  </footer>
+
+</body>
+</html>
